@@ -31,4 +31,4 @@ fun ApiResponse.asBuilder() = ApiResponseBuilder(this)
  * @return [ApiResponse] with all.
  */
 fun ApiResponse.builder(block: ApiResponseBuilder.() -> Unit) =
-    ApiResponseBuilder(this).apply(block).build() as ActualApiResponse
+    ApiResponseBuilder(this).apply(block).build()
