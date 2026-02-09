@@ -31,8 +31,8 @@ kotlin {
     }
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict", "-Xannotation-target-all")
-        apiVersion.set(KotlinVersion.KOTLIN_2_2)
-        languageVersion.set(KotlinVersion.KOTLIN_2_2)
+        apiVersion.set(KotlinVersion.KOTLIN_2_3)
+        languageVersion.set(KotlinVersion.KOTLIN_2_3)
         jvmTarget.set(JvmTarget.JVM_21)
         jvmDefault.set(JvmDefaultMode.NO_COMPATIBILITY)
         javaParameters.set(true)
@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.bundles.projectImplementation)
     implementation(libs.bundles.quarkusImplementation)
 
+    testImplementation(enforcedPlatform(libs.quarkus.bom))
     testImplementation(libs.bundles.projectTestImplementation)
     testImplementation(libs.bundles.quarkusTestImplementation)
 }
