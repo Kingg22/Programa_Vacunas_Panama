@@ -1,5 +1,3 @@
-rootProject.name = "api-vacunas-panama"
-
 pluginManagement {
     repositories {
         mavenCentral()
@@ -17,3 +15,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
+rootProject.name = "api-vacunas-panama"
