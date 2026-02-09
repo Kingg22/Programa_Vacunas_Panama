@@ -51,9 +51,7 @@ data class UsuarioDto(
 
     @param:NotEmpty(message = "Los roles no puede estar vacíos")
     @field:NotEmpty(message = "Los roles no puede estar vacíos")
-    @param:Valid
-    @field:Valid
-    val roles: Set<RolDto>,
+    val roles: Set<@Valid RolDto>,
 
     @all:JsonIgnore
     val disabled: Boolean = true,

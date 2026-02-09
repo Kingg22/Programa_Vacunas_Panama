@@ -34,8 +34,7 @@ data class RolDto(
     @all:Size(max = 100)
     val descripcion: String? = null,
 
-    @all:Valid
-    val permisos: Set<PermisoDto> = emptySet(),
+    val permisos: Set<@Valid PermisoDto> = emptySet(),
 
     @all:JsonProperty(value = "created_at")
     @all:PastOrPresent(message = "La fecha de creación no puede ser futura")

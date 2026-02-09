@@ -40,8 +40,7 @@ data class VacunaDto(
     @all:PastOrPresent
     val updatedAt: LocalDateTime? = null,
 
-    @all:Valid
-    val fabricantes: Set<FabricanteDto> = emptySet(),
+    val fabricantes: Set<@Valid FabricanteDto> = emptySet(),
 ) : Serializable {
     companion object
 }

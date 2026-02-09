@@ -31,6 +31,5 @@ data class PdfDto(
     // doctor.idoneidad, lote
     // De esos datos si es null colocar 'Desconocido'
     @all:NotEmpty
-    @all:Valid
-    val dosis: List<DosisDto> = emptyList(),
+    val dosis: List<@Valid DosisDto> = emptyList(),
 ) : Serializable
