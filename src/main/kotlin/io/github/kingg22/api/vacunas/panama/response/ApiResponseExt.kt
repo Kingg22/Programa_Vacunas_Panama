@@ -30,5 +30,4 @@ fun ApiResponse.asBuilder() = ApiResponseBuilder(this)
  * Allows you to construct or modify an [ApiResponse] object using DSL style.
  * @return [ApiResponse] with all.
  */
-fun ApiResponse.builder(block: ApiResponseBuilder.() -> Unit) =
-    ApiResponseBuilder(this).apply(block).build()
+fun ApiResponse.builder(block: ApiResponseBuilder.() -> Unit) = ApiResponseBuilder(this).apply(block).build()
