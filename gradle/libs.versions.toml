@@ -4,9 +4,6 @@ kotlin = "2.3.10"
 # https://github.com/google/ksp/releases
 ksp = "2.3.5"
 
-# PDF
-# https://github.com/itext/itext-java/releases
-itextpdf-core = "9.5.0"
 # https://github.com/itext/itext-pdfhtml-java/releases
 itextpdf-html = "6.3.0"
 
@@ -76,7 +73,6 @@ konvert-api = { group = "io.mcarle", name = "konvert-api", version.ref = "konver
 konvert = { group = "io.mcarle", name = "konvert", version.ref = "konvert" }
 
 # PDF
-itextpdf = { group = "com.itextpdf", name = "itext-core", version.ref = "itextpdf-core" }
 html2pdf = { group = "com.itextpdf", name = "html2pdf", version.ref = "itextpdf-html" }
 
 # Quarkus
@@ -118,9 +114,8 @@ projectImplementation = [
     "kotlin-jdk8",
     "jackson-module-kotlin",
     "jackson-datatype-jsr310",
-    "itextpdf",
     "html2pdf",
-    "konvert-api"
+    "konvert-api",
 ]
 
 quarkusImplementation = [
@@ -142,7 +137,8 @@ quarkusImplementation = [
     "quarkus-jackson",
     "quarkus-smallrye-jwt",
     "quarkus-smallrye-jwt-build",
-    "quarkus-container"
+    "quarkus-container",
+    #"quarkus-openpdf",
 ]
 
 projectTestImplementation = [
@@ -155,12 +151,12 @@ projectTestImplementation = [
     "kotest-assertions-json",
     "rest-assured",
     "rest-assured-kotlin",
-    "konsist"
+    "konsist",
 ]
 
 quarkusTestImplementation = [
     "quarkus-junit5",
-    "quarkus-test-hibernate-reactive-panache"
+    "quarkus-test-hibernate-reactive-panache",
 ]
 
 [plugins]
